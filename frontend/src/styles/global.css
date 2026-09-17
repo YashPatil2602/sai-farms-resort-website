@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --color-primary: #173b2c;
+  --color-primary-dark: #0e291e;
+  --color-secondary: #b79556;
+  --color-secondary-light: #d5bd8a;
+
+  --color-background: #f8f6f1;
+  --color-surface: #ffffff;
+  --color-text: #202020;
+  --color-text-light: #666666;
+  --color-white: #ffffff;
+  --color-border: #e8e3da;
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+
+  --container-width: 1280px;
+
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.1);
+
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(90%, var(--container-width));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 50px;
+  padding: 0 28px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background: #9d7b40;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.btn-outline:hover {
+  background: var(--color-white);
+  color: var(--color-primary-dark);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 0;
+  }
+}
