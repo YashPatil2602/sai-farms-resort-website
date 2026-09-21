@@ -1,0 +1,205 @@
+.stay-dining-section {
+  padding: 120px 0;
+  background: #f6f3ec;
+}
+
+.stay-dining-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.stay-dining-content h2 {
+  color: #173b2c;
+  font-size: clamp(50px, 5vw, 76px);
+  line-height: 0.98;
+  font-weight: 500;
+  margin-bottom: 26px;
+}
+
+.stay-dining-content h2 span {
+  display: block;
+  color: #a47d3d;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.stay-dining-intro {
+  max-width: 520px;
+  color: #66635d;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+.stay-dining-features {
+  border-top: 1px solid #ddd7cc;
+  margin-bottom: 34px;
+}
+
+.stay-dining-features > div {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 17px;
+  padding: 22px 0;
+  border-bottom: 1px solid #ddd7cc;
+  color: #173b2c;
+}
+
+.stay-dining-features svg {
+  color: #a47d3d;
+  margin-top: 3px;
+}
+
+.stay-dining-features strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.stay-dining-features span {
+  display: block;
+  max-width: 420px;
+  color: #77726a;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.stay-dining-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stay-dining-primary,
+.stay-dining-secondary {
+  min-height: 50px;
+  padding: 0 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+.stay-dining-primary {
+  background: #b79556;
+  color: white;
+}
+
+.stay-dining-secondary {
+  border: 1px solid #173b2c;
+  color: #173b2c;
+}
+
+.stay-dining-gallery {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 14px;
+  min-height: 600px;
+}
+
+.stay-dining-room,
+.stay-dining-food {
+  position: relative;
+  overflow: hidden;
+}
+
+.stay-dining-room {
+  margin-top: 70px;
+}
+
+.stay-dining-food {
+  margin-bottom: 70px;
+}
+
+.stay-dining-room img,
+.stay-dining-food img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.stay-dining-room:hover img,
+.stay-dining-food:hover img {
+  transform: scale(1.05);
+}
+
+.stay-dining-label {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+
+  color: white;
+
+  background: rgba(10, 35, 25, 0.76);
+  backdrop-filter: blur(7px);
+
+  padding: 18px;
+}
+
+.stay-dining-label span {
+  display: block;
+
+  color: #d5bd8a;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  margin-bottom: 5px;
+}
+
+.stay-dining-label strong {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+@media (max-width: 950px) {
+  .stay-dining-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stay-dining-section {
+    padding: 80px 0;
+  }
+
+  .stay-dining-gallery {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .stay-dining-room,
+  .stay-dining-food {
+    height: 400px;
+    margin: 0;
+  }
+
+  .stay-dining-actions {
+    flex-direction: column;
+  }
+
+  .stay-dining-primary,
+  .stay-dining-secondary {
+    width: 100%;
+  }
+}

@@ -1,0 +1,130 @@
+.staycation-activities-section {
+  padding: 120px 0;
+  background: #173b2c;
+  color: white;
+}
+
+.staycation-activities-header {
+  max-width: 760px;
+  margin-bottom: 55px;
+}
+
+.staycation-activities-header .section-eyebrow {
+  color: #d5bd8a;
+}
+
+.staycation-activities-header h2 {
+  font-size: clamp(52px, 5vw, 78px);
+  line-height: 0.98;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.staycation-activities-header h2 span {
+  display: block;
+  color: #d5bd8a;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.staycation-activities-header > p {
+  max-width: 570px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.staycation-activities-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr 0.85fr;
+  gap: 15px;
+}
+
+.staycation-activity-card {
+  position: relative;
+  min-height: 540px;
+  overflow: hidden;
+}
+
+.staycation-activity-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.staycation-activity-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(5, 22, 15, 0.92) 0%,
+      rgba(5, 22, 15, 0.25) 48%,
+      rgba(5, 22, 15, 0.04) 75%
+    );
+}
+
+.staycation-activity-number {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 2;
+  font-family: var(--font-heading);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+}
+
+.staycation-activity-content {
+  position: absolute;
+  z-index: 2;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+}
+
+.staycation-activity-content h3 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.staycation-activity-content p {
+  max-width: 330px;
+  color: rgba(255, 255, 255, 0.67);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.staycation-activity-card:hover img {
+  transform: scale(1.06);
+}
+
+@media (max-width: 950px) {
+  .staycation-activities-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .staycation-activity-card:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .staycation-activities-section {
+    padding: 80px 0;
+  }
+
+  .staycation-activities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .staycation-activity-card,
+  .staycation-activity-card:first-child {
+    grid-column: auto;
+    min-height: 470px;
+  }
+}

@@ -1,0 +1,174 @@
+.staycation-experiences-section {
+  padding: 120px 0;
+  background: #f6f3ec;
+}
+
+.staycation-experiences-header {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 55px;
+}
+
+.staycation-experiences-header h2 {
+  color: #173b2c;
+  font-size: clamp(50px, 5vw, 76px);
+  line-height: 0.98;
+  font-weight: 500;
+}
+
+.staycation-experiences-header h2 span {
+  display: block;
+  margin-top: 8px;
+  color: #a47d3d;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.staycation-experiences-header > p {
+  max-width: 480px;
+  color: #66635d;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.staycation-experiences-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.staycation-experience-card {
+  position: relative;
+  height: 610px;
+  overflow: hidden;
+  color: white;
+  background: #173b2c;
+}
+
+.staycation-experience-card img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.staycation-experience-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(5, 24, 16, 0.96) 0%,
+      rgba(5, 24, 16, 0.42) 48%,
+      rgba(5, 24, 16, 0.08) 78%
+    );
+}
+
+.staycation-experience-number {
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  z-index: 2;
+
+  font-family: var(--font-heading);
+  font-size: 19px;
+
+  color: rgba(255,255,255,0.8);
+}
+
+.staycation-experience-content {
+  position: absolute;
+  z-index: 2;
+
+  left: 32px;
+  right: 32px;
+  bottom: 32px;
+}
+
+.staycation-experience-content > p {
+  color: #d5bd8a;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+
+  margin-bottom: 10px;
+}
+
+.staycation-experience-content h3 {
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.05;
+
+  margin-bottom: 17px;
+}
+
+.staycation-experience-description {
+  color: rgba(255,255,255,0.72);
+
+  font-size: 12px;
+  line-height: 1.75;
+
+  margin-bottom: 20px;
+}
+
+.staycation-experience-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: white;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.45);
+  padding-bottom: 6px;
+}
+
+.staycation-experience-card:hover img {
+  transform: scale(1.06);
+}
+
+@media (max-width: 950px) {
+  .staycation-experiences-header {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .staycation-experiences-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .staycation-experience-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .staycation-experiences-section {
+    padding: 80px 0;
+  }
+
+  .staycation-experiences-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .staycation-experience-card,
+  .staycation-experience-card:last-child {
+    grid-column: auto;
+    height: 520px;
+  }
+}
