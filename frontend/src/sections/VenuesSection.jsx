@@ -36,7 +36,7 @@ const venues = [
 
 function VenuesSection() {
   return (
-    <section className="venues-section">
+    <section id="venues" className="venues-section">
       <div className="container">
 
         <div className="venues-header">

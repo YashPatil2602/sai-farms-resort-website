@@ -1,0 +1,172 @@
+.wedding-packages-section {
+  padding: 120px 0;
+  background: #f6f3ec;
+}
+
+.wedding-packages-header {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 55px;
+}
+
+.wedding-packages-header h2 {
+  color: #173b2c;
+  font-size: clamp(50px, 5vw, 76px);
+  line-height: 0.98;
+  font-weight: 500;
+}
+
+.wedding-packages-header h2 span {
+  display: block;
+  color: #a47d3d;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.wedding-packages-header > p {
+  color: #66635d;
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 470px;
+}
+
+.wedding-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #ded8ce;
+  border-left: 1px solid #ded8ce;
+}
+
+.wedding-package-card {
+  position: relative;
+  min-height: 490px;
+  padding: 38px 30px;
+  border-right: 1px solid #ded8ce;
+  border-bottom: 1px solid #ded8ce;
+  transition: 0.35s ease;
+}
+
+.wedding-package-card:hover {
+  background: #173b2c;
+  color: white;
+  transform: translateY(-6px);
+}
+
+.package-number {
+  display: block;
+  color: #a47d3d;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.wedding-package-card h3 {
+  color: #173b2c;
+  font-size: 31px;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+
+.wedding-package-card:hover h3 {
+  color: white;
+}
+
+.package-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 34px;
+}
+
+.package-meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #77726a;
+  font-size: 11px;
+}
+
+.wedding-package-card:hover .package-meta span {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.package-from {
+  color: #9b958b;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.package-price {
+  display: block;
+  color: #a47d3d;
+  font-family: var(--font-heading);
+  font-size: 34px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.package-note {
+  color: #77726a;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.wedding-package-card:hover .package-note {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.package-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #173b2c;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 6px;
+}
+
+.wedding-package-card:hover .package-link {
+  color: #d5bd8a;
+}
+
+.package-disclaimer {
+  margin-top: 22px;
+  color: #8a857d;
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .wedding-packages-header {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .wedding-packages-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .wedding-packages-section {
+    padding: 80px 0;
+  }
+
+  .wedding-packages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wedding-package-card {
+    min-height: auto;
+  }
+}

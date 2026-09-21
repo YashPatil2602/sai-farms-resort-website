@@ -1,0 +1,100 @@
+.wedding-intro-section {
+  background: #f6f3ec;
+  padding: 115px 0;
+}
+
+.wedding-intro-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 90px;
+  align-items: end;
+}
+
+.wedding-intro-heading h2 {
+  color: #173b2c;
+  font-size: clamp(52px, 5vw, 78px);
+  line-height: 0.98;
+  font-weight: 500;
+}
+
+.wedding-intro-heading h2 span {
+  display: block;
+  color: #a47d3d;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.wedding-intro-copy {
+  max-width: 500px;
+}
+
+.wedding-intro-copy p {
+  color: #66635d;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.wedding-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 70px;
+  border-top: 1px solid #ded8ce;
+  border-bottom: 1px solid #ded8ce;
+}
+
+.wedding-stat {
+  padding: 34px 20px;
+  text-align: center;
+  border-right: 1px solid #ded8ce;
+}
+
+.wedding-stat:last-child {
+  border-right: none;
+}
+
+.wedding-stat strong {
+  display: block;
+  font-family: var(--font-heading);
+  color: #a47d3d;
+  font-size: 37px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.wedding-stat span {
+  color: #173b2c;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 900px) {
+  .wedding-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .wedding-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wedding-stat {
+    border-bottom: 1px solid #ded8ce;
+  }
+}
+
+@media (max-width: 600px) {
+  .wedding-intro-section {
+    padding: 80px 0;
+  }
+
+  .wedding-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wedding-stat {
+    padding: 25px 10px;
+  }
+}

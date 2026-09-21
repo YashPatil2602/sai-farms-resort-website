@@ -1,0 +1,141 @@
+.wedding-hero {
+  position: relative;
+  min-height: 100vh;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(22, 9, 9, 0.78) 0%,
+      rgba(22, 9, 9, 0.5) 50%,
+      rgba(22, 9, 9, 0.18) 100%
+    ),
+    url("/images/venues/riverside-amphitheatre.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+
+  padding: 150px 7% 100px;
+
+  color: white;
+}
+
+.wedding-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(10, 20, 14, 0.7),
+      transparent 45%
+    );
+}
+
+.wedding-hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 850px;
+}
+
+.wedding-eyebrow {
+  color: #d5bd8a;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 4px;
+
+  margin-bottom: 22px;
+}
+
+.wedding-hero h1 {
+  font-size: clamp(58px, 6vw, 96px);
+
+  font-weight: 500;
+  line-height: 0.95;
+
+  margin-bottom: 28px;
+}
+
+.wedding-hero h1 span {
+  display: block;
+
+  color: #d5bd8a;
+
+  font-style: italic;
+  font-weight: 400;
+
+  margin-top: 10px;
+}
+
+.wedding-hero-text {
+  max-width: 650px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 16px;
+  line-height: 1.9;
+
+  margin-bottom: 36px;
+}
+
+.wedding-hero-actions {
+  display: flex;
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.wedding-primary-btn,
+.wedding-secondary-btn {
+  min-height: 52px;
+
+  padding: 0 27px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.wedding-primary-btn {
+  background: #b79556;
+  color: white;
+}
+
+.wedding-secondary-btn {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .wedding-hero {
+    min-height: 850px;
+    padding: 140px 7% 100px;
+  }
+
+  .wedding-hero h1 {
+    font-size: 50px;
+  }
+
+  .wedding-hero-actions {
+    flex-direction: column;
+  }
+
+  .wedding-primary-btn,
+  .wedding-secondary-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,163 @@
+.wedding-moments-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 760px;
+
+  background: #173b2c;
+  color: white;
+}
+
+.wedding-moments-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.wedding-moments-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wedding-moments-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(6, 25, 17, 0.05),
+      rgba(6, 25, 17, 0.28)
+    );
+}
+
+.wedding-moments-content {
+  padding: 100px 11%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wedding-moments-content .section-eyebrow {
+  color: #d5bd8a;
+}
+
+.wedding-moments-content h2 {
+  font-size: clamp(52px, 5vw, 78px);
+  line-height: 0.98;
+  font-weight: 500;
+
+  margin-bottom: 26px;
+}
+
+.wedding-moments-content h2 span {
+  display: block;
+
+  color: #d5bd8a;
+
+  font-style: italic;
+  font-weight: 400;
+
+  margin-top: 7px;
+}
+
+.wedding-moments-intro {
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 14px;
+  line-height: 1.9;
+
+  max-width: 520px;
+
+  margin-bottom: 40px;
+}
+
+.wedding-moments-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+
+  margin-bottom: 38px;
+}
+
+.wedding-moment {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 20px 5px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.wedding-moment:nth-child(odd) {
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.wedding-moment span {
+  color: #d5bd8a;
+
+  font-family: var(--font-heading);
+
+  font-size: 15px;
+}
+
+.wedding-moment strong {
+  font-family: var(--font-heading);
+
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.wedding-moments-btn {
+  width: fit-content;
+
+  min-height: 52px;
+  padding: 0 27px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  background: #b79556;
+  color: white;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 900px) {
+  .wedding-moments-section {
+    grid-template-columns: 1fr;
+  }
+
+  .wedding-moments-image {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wedding-moments-content {
+    padding: 75px 7%;
+  }
+
+  .wedding-moments-list {
+    grid-template-columns: 1fr;
+  }
+
+  .wedding-moment:nth-child(odd) {
+    border-right: none;
+  }
+
+  .wedding-moments-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
