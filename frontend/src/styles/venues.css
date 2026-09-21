@@ -1,0 +1,240 @@
+.venues-section {
+  padding: 120px 0;
+  background: #f6f3ec;
+}
+
+.venues-header {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 58px;
+}
+
+.venues-header h2 {
+  color: #173b2c;
+  font-size: clamp(50px, 5vw, 78px);
+  line-height: 0.98;
+  font-weight: 500;
+}
+
+.venues-header h2 span {
+  display: block;
+  margin-top: 8px;
+  color: #a47d3d;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.venues-header-right {
+  max-width: 480px;
+}
+
+.venues-header-right p {
+  color: #66635d;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+.venues-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #173b2c;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+
+  padding-bottom: 7px;
+
+  border-bottom: 1px solid #173b2c;
+}
+
+.venues-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(12, 1fr);
+
+  grid-auto-rows: 360px;
+
+  gap: 16px;
+}
+
+.venue-card {
+  position: relative;
+
+  grid-column: span 4;
+
+  overflow: hidden;
+
+  background: #173b2c;
+  color: white;
+}
+
+.venue-featured {
+  grid-column: span 7;
+  grid-row: span 2;
+}
+
+.venue-poolside {
+  grid-column: span 5;
+  grid-row: span 2;
+}
+
+.venue-card img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.6, 0.3, 1);
+}
+
+.venue-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(6, 26, 18, 0.92) 0%,
+      rgba(6, 26, 18, 0.32) 45%,
+      rgba(6, 26, 18, 0.05) 75%
+    );
+}
+
+.venue-number {
+  position: absolute;
+
+  top: 24px;
+  right: 24px;
+
+  z-index: 2;
+
+  font-family: var(--font-heading);
+  font-size: 18px;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.venue-content {
+  position: absolute;
+
+  z-index: 2;
+
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+}
+
+.venue-content > p {
+  color: #d5bd8a;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+
+  margin-bottom: 8px;
+}
+
+.venue-content h3 {
+  font-size: 33px;
+  line-height: 1.05;
+
+  font-weight: 500;
+
+  margin-bottom: 15px;
+}
+
+.venue-featured .venue-content h3,
+.venue-poolside .venue-content h3 {
+  font-size: 46px;
+}
+
+.venue-discover {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 9px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+
+  opacity: 0;
+
+  transform: translateY(8px);
+
+  transition: 0.35s ease;
+}
+
+.venue-card:hover img {
+  transform: scale(1.06);
+}
+
+.venue-card:hover .venue-discover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1000px) {
+
+  .venues-header {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .venue-card,
+  .venue-featured,
+  .venue-poolside {
+    grid-column: span 6;
+    grid-row: span 1;
+  }
+
+  .venue-featured {
+    grid-column: span 12;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .venues-section {
+    padding: 80px 0;
+  }
+
+  .venues-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 430px;
+  }
+
+  .venue-card,
+  .venue-featured,
+  .venue-poolside {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .venue-featured .venue-content h3,
+  .venue-poolside .venue-content h3,
+  .venue-content h3 {
+    font-size: 35px;
+  }
+
+}
