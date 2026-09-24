@@ -42,6 +42,13 @@ function HeroSection() {
           >
             Plan Your Stay
           </Link>
+
+          <Link
+            to="/school-picnic"
+            className="hero-btn hero-btn-outline"
+          >
+            Plan a Day Outing
+          </Link>
         </div>
       </div>
 
