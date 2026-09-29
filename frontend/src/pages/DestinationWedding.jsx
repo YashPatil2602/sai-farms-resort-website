@@ -8,6 +8,7 @@ import WeddingPackagesSection from "../sections/WeddingPackagesSection";
 import WeddingMomentsSection from "../sections/WeddingMomentsSection";
 
 import "../styles/destination-wedding.css";
+import WeddingStoriesSection from "../sections/WeddingStoriesSection";
 
 function DestinationWedding() {
   return (
@@ -47,6 +48,8 @@ function DestinationWedding() {
       <WeddingIntroSection />
 
       <VenuesSection />
+
+      <WeddingStoriesSection />
 
       <WeddingStaySection />
 

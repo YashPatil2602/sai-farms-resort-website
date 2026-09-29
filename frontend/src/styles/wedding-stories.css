@@ -1,0 +1,197 @@
+.wedding-stories-section {
+  background: #f4f0e8;
+  padding: 120px 7%;
+}
+
+.wedding-stories-inner {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.wedding-stories-heading {
+  max-width: 850px;
+  margin-bottom: 60px;
+}
+
+.wedding-stories-eyebrow {
+  color: #9c7b43;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.wedding-stories-heading h2 {
+  font-family: var(--font-heading);
+  color: var(--color-primary-dark);
+  font-size: clamp(52px, 6vw, 84px);
+  font-weight: 500;
+  line-height: 0.98;
+  margin-bottom: 26px;
+}
+
+.wedding-stories-heading h2 span {
+  display: block;
+  color: #a68449;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 7px;
+}
+
+.wedding-stories-description {
+  max-width: 660px;
+  color: #66645f;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.wedding-stories-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 22px;
+}
+
+.wedding-story-card {
+  position: relative;
+  overflow: hidden;
+  background: #0b241a;
+}
+
+.wedding-story-featured {
+  grid-row: span 2;
+}
+
+.wedding-story-card video {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: block;
+  object-fit: cover;
+  background: #0b241a;
+}
+
+.wedding-story-featured video {
+  min-height: 625px;
+}
+
+.wedding-story-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 65px 32px 28px;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(4, 18, 12, 0.9),
+    transparent
+  );
+}
+
+.wedding-story-caption p {
+  color: #d5b979;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px;
+  margin-bottom: 7px;
+}
+
+.wedding-story-caption h3 {
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 34px;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .wedding-stories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wedding-story-featured {
+    grid-row: auto;
+  }
+
+  .wedding-story-featured video,
+  .wedding-story-card video {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wedding-stories-section {
+    padding: 80px 7%;
+  }
+
+  .wedding-stories-heading h2 {
+    font-size: 47px;
+  }
+
+  .wedding-story-featured video,
+  .wedding-story-card video {
+    min-height: 360px;
+  }
+
+  .wedding-story-caption {
+    padding: 55px 22px 22px;
+  }
+
+  .wedding-story-caption h3 {
+    font-size: 28px;
+  }
+}
+
+.wedding-story-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+
+  width: 74px;
+  height: 74px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  background: rgba(9, 37, 27, 0.78);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.wedding-story-play:hover {
+  background: #b79556;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.wedding-story-caption span {
+  display: inline-block;
+  margin-top: 10px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .wedding-story-play {
+    width: 62px;
+    height: 62px;
+  }
+}

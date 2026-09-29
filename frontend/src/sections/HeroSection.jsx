@@ -5,6 +5,22 @@ import "../styles/hero.css";
 function HeroSection() {
   return (
     <section className="hero">
+      <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/videos/posters/resort-reel.jpg"
+        aria-hidden="true"
+      >
+        <source
+          src="/videos/resort-reel.mp4"
+          type="video/mp4"
+        />
+      </video>
+
       <div className="hero-overlay"></div>
 
       <div className="hero-content">
