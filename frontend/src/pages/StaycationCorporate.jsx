@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import CategoryFilmsSection from "../sections/CategoryFilmsSection";
 import StaycationExperiencesSection from "../sections/StaycationExperiencesSection";
 import StaycationActivitiesSection from "../sections/StaycationActivitiesSection";
 import StaycationStayDiningSection from "../sections/StaycationStayDiningSection";
@@ -10,6 +11,12 @@ function StaycationCorporate() {
   return (
     <>
       <section className="staycation-hero">
+        <div className="staycation-hero-mobile-media">
+          <img
+            src="/images/hero/hero.jpg"
+            alt="Sai Farms resort aerial view"
+          />
+        </div>
         <div className="staycation-overlay"></div>
 
         <div className="staycation-hero-content">
@@ -39,6 +46,27 @@ function StaycationCorporate() {
           </div>
         </div>
       </section>
+
+      <CategoryFilmsSection
+        eyebrow="Staycation & Corporate · In Motion"
+        title="Stay. Connect."
+        accent="Experience More."
+        description="From relaxing resort escapes to memorable team gatherings, experience Sai Farms through moments made for families, friends and colleagues."
+        films={[
+          {
+            label: "Staycation",
+            title: "Slow Down & Stay",
+            video: "/videos/staycation-experience.mp4",
+            poster: "/videos/posters/staycation-experience.jpg",
+          },
+          {
+            label: "Corporate & Groups",
+            title: "Connect. Celebrate. Recharge.",
+            video: "/videos/corporate-experience.mp4",
+            poster: "/videos/posters/corporate-experience.jpg",
+          },
+        ]}
+      />
 
       <StaycationExperiencesSection />
 

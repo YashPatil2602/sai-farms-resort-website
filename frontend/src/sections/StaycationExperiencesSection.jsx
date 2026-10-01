@@ -61,16 +61,16 @@ function StaycationExperiencesSection() {
               className="staycation-experience-card"
               key={experience.number}
             >
-              <img
-                src={experience.image}
-                alt={experience.label}
-              />
+              <div className="staycation-experience-media">
+                <img
+                  src={experience.image}
+                  alt={experience.label}
+                />
 
-              <div className="staycation-experience-overlay"></div>
-
-              <span className="staycation-experience-number">
-                {experience.number}
-              </span>
+                <span className="staycation-experience-number">
+                  {experience.number}
+                </span>
+              </div>
 
               <div className="staycation-experience-content">
                 <p>{experience.label}</p>

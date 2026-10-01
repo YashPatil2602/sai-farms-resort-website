@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import CategoryFilmsSection from "../sections/CategoryFilmsSection";
 import SchoolExperiencesSection from "../sections/SchoolExperiencesSection";
 import SchoolGroupSection from "../sections/SchoolGroupSection";
 import SchoolCTASection from "../sections/SchoolCTASection";
@@ -39,6 +40,21 @@ function SchoolPicnic() {
           </div>
         </div>
       </section>
+
+      <CategoryFilmsSection
+        eyebrow="School Picnic · In Motion"
+        title="A Day to Learn, Play"
+        accent="and Make Memories."
+        description="A lively day experience with teachers, friends, open spaces, games and memorable resort moments."
+        films={[
+          {
+            label: "School Picnic & Day Experience",
+            title: "A Day at Sai Farms",
+            video: "/videos/school-picnic.mp4",
+            poster: "/videos/posters/school-picnic.jpg",
+          },
+        ]}
+      />
 
       <SchoolExperiencesSection />
 

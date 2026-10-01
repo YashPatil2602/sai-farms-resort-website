@@ -48,7 +48,7 @@ function ResortHighlights() {
 
         <div className="resort-highlights-image">
           <img
-            src="/images/activities/resort-aerial.jpg"
+            src="/images/hero/hero.jpg"
             alt="Sai Farms aerial resort view"
           />
 

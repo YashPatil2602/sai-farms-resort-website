@@ -136,3 +136,117 @@
     width: 100%;
   }
 }
+
+
+/* CLIENT STAYCATION IMAGE FOCUS */
+.staycation-hero {
+  background-position: center 68%;
+}
+
+@media (max-width: 600px) {
+  .staycation-hero {
+    background-position: center 72%;
+  }
+
+  .staycation-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(6,24,17,0.54) 0%,
+        rgba(6,24,17,0.26) 60%,
+        rgba(6,24,17,0.08) 100%
+      );
+  }
+}
+
+/* ==================================================
+   CLIENT FINAL: KEEP RESORT CLEAR ON MOBILE
+================================================== */
+
+.staycation-hero-mobile-media {
+  display: none;
+}
+
+@media (max-width: 600px) {
+
+  .staycation-hero {
+    display: block;
+
+    min-height: auto;
+
+    padding:
+      86px
+      0
+      0;
+
+    background:
+      #0d291e;
+  }
+
+  .staycation-hero-mobile-media {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #173b2c;
+  }
+
+  .staycation-hero-mobile-media img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center 64%;
+  }
+
+  .staycation-overlay {
+    display: none;
+  }
+
+  .staycation-hero-content {
+    position: relative;
+
+    max-width: none;
+
+    padding:
+      30px
+      7%
+      38px;
+
+    background:
+      #0d291e;
+  }
+
+  .staycation-hero h1 {
+    font-size: 44px;
+
+    line-height: 1;
+
+    margin-bottom: 22px;
+  }
+
+  .staycation-hero-text {
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    margin-bottom: 27px;
+  }
+
+  .staycation-actions {
+    flex-direction: column;
+  }
+
+  .staycation-primary-btn,
+  .staycation-secondary-btn {
+    width: 100%;
+  }
+}
+

@@ -1,25 +1,68 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin } from "lucide-react";
 import "../styles/hero.css";
 
+const heroVideos = [
+  {
+    label: "Destination Weddings",
+    src: "/videos/wedding-cinematic-teaser.mp4",
+    poster: "/videos/posters/wedding-cinematic-teaser.jpg",
+  },
+  {
+    label: "Staycation & Corporate",
+    src: "/videos/staycation-experience.mp4",
+    poster: "/videos/posters/staycation-experience.jpg",
+  },
+  {
+    label: "School Picnic & Day Experience",
+    src: "/videos/school-picnic.mp4",
+    poster: "/videos/posters/school-picnic.jpg",
+  },
+];
+
 function HeroSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [glare, setGlare] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setGlare(true);
+
+      setTimeout(() => {
+        setActiveIndex((current) =>
+          current === heroVideos.length - 1 ? 0 : current + 1
+        );
+      }, 350);
+
+      setTimeout(() => {
+        setGlare(false);
+      }, 900);
+    }, 5200);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const activeVideo = heroVideos[activeIndex];
+
   return (
     <section className="hero">
       <video
-        className="hero-video"
+        key={activeVideo.src}
+        className="hero-video hero-video-sequence"
         autoPlay
         muted
-        loop
         playsInline
         preload="metadata"
-        poster="/videos/posters/resort-reel.jpg"
+        poster={activeVideo.poster}
         aria-hidden="true"
       >
-        <source
-          src="/videos/resort-reel.mp4"
-          type="video/mp4"
-        />
+        <source src={activeVideo.src} type="video/mp4" />
       </video>
+
+      <div
+        className={`hero-glare ${glare ? "hero-glare-active" : ""}`}
+      ></div>
 
       <div className="hero-overlay"></div>
 

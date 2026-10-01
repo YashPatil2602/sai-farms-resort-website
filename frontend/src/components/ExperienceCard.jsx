@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 
 function ExperienceCard({
-  image,
+  video,
+  poster,
   number,
   eyebrow,
   title,
@@ -11,16 +12,26 @@ function ExperienceCard({
 }) {
   return (
     <Link to={link} className="experience-card">
-      <img
-        src={image}
-        alt={title}
-        className="experience-card-image"
-      />
 
-      <div className="experience-card-overlay"></div>
+      <div className="experience-card-media">
+        <video
+          className="experience-card-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={poster}
+          aria-hidden="true"
+        >
+          <source src={video} type="video/mp4" />
+        </video>
 
-      <div className="experience-card-number">
-        {number}
+        <div className="experience-card-overlay"></div>
+
+        <div className="experience-card-number">
+          {number}
+        </div>
       </div>
 
       <div className="experience-card-content">
@@ -39,6 +50,7 @@ function ExperienceCard({
           <ArrowUpRight size={17} />
         </div>
       </div>
+
     </Link>
   );
 }

@@ -69,28 +69,33 @@ function WeddingStoriesSection() {
                 story.featured ? "wedding-story-featured" : ""
               }`}
             >
-              <video
-                ref={(element) => {
-                  videoRefs.current[index] = element;
-                }}
-                controls={Boolean(startedVideos[index])}
-                playsInline
-                preload="metadata"
-                poster={story.poster}
-              >
-                <source src={story.video} type="video/mp4" />
-              </video>
-
-              {!startedVideos[index] && (
-                <button
-                  type="button"
-                  className="wedding-story-play"
-                  onClick={() => playVideo(index)}
-                  aria-label={`Play ${story.title}`}
+              <div className="wedding-story-media">
+                <video
+                  ref={(element) => {
+                    videoRefs.current[index] = element;
+                  }}
+                  controls={Boolean(startedVideos[index])}
+                  playsInline
+                  preload="metadata"
+                  poster={story.poster}
                 >
-                  <Play size={28} fill="currentColor" />
-                </button>
-              )}
+                  <source
+                    src={story.video}
+                    type="video/mp4"
+                  />
+                </video>
+
+                {!startedVideos[index] && (
+                  <button
+                    type="button"
+                    className="wedding-story-play"
+                    onClick={() => playVideo(index)}
+                    aria-label={`Play ${story.title}`}
+                  >
+                    <Play size={28} fill="currentColor" />
+                  </button>
+                )}
+              </div>
 
               <div className="wedding-story-caption">
                 <p>{story.label}</p>

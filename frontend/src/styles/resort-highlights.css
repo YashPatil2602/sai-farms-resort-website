@@ -210,3 +210,72 @@
   }
 
 }
+
+
+/* CLIENT RESORT IMAGE FOCUS */
+.resort-highlights-image img {
+  object-position: 50% 82%;
+}
+
+@media (max-width: 950px) {
+  .resort-highlights-image img {
+    object-position: 50% 78%;
+  }
+}
+
+@media (max-width: 600px) {
+  .resort-highlights-image {
+    min-height: 360px;
+  }
+
+  .resort-highlights-image img {
+    object-position: 50% 76%;
+  }
+
+  .resort-highlights-image::after {
+    background: linear-gradient(
+      to right,
+      rgba(8,30,21,0.02),
+      rgba(8,30,21,0.12)
+    );
+  }
+}
+
+/* ==================================================
+   CLIENT FINAL: RESORT MUST BE CLEARLY VISIBLE
+================================================== */
+
+.resort-highlights-image img {
+  object-fit: cover;
+  object-position: center 58%;
+}
+
+.resort-highlights-image::after {
+  background:
+    linear-gradient(
+      to right,
+      rgba(8, 30, 21, 0.02),
+      rgba(8, 30, 21, 0.12)
+    );
+}
+
+@media (max-width: 950px) {
+
+  .resort-highlights-image img {
+    object-position: center 58%;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .resort-highlights-image {
+    min-height: 360px;
+  }
+
+  .resort-highlights-image img {
+    object-position: center 55%;
+  }
+
+}
+

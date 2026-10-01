@@ -46,6 +46,7 @@ function VideoShowcaseSection() {
   return (
     <section className="video-showcase-section">
       <div className="container">
+
         <div className="video-showcase-header">
           <div>
             <p className="video-showcase-eyebrow">
@@ -71,28 +72,33 @@ function VideoShowcaseSection() {
               className={`video-showcase-card ${item.className}`}
               key={item.title}
             >
-              <video
-                ref={(element) => {
-                  videoRefs.current[index] = element;
-                }}
-                controls={Boolean(startedVideos[index])}
-                playsInline
-                preload="metadata"
-                poster={item.poster}
-              >
-                <source src={item.video} type="video/mp4" />
-              </video>
-
-              {!startedVideos[index] && (
-                <button
-                  type="button"
-                  className="video-showcase-play"
-                  onClick={() => playVideo(index)}
-                  aria-label={`Play ${item.title}`}
+              <div className="video-showcase-media">
+                <video
+                  ref={(element) => {
+                    videoRefs.current[index] = element;
+                  }}
+                  controls={Boolean(startedVideos[index])}
+                  playsInline
+                  preload="metadata"
+                  poster={item.poster}
                 >
-                  <Play size={28} fill="currentColor" />
-                </button>
-              )}
+                  <source
+                    src={item.video}
+                    type="video/mp4"
+                  />
+                </video>
+
+                {!startedVideos[index] && (
+                  <button
+                    type="button"
+                    className="video-showcase-play"
+                    onClick={() => playVideo(index)}
+                    aria-label={`Play ${item.title}`}
+                  >
+                    <Play size={28} fill="currentColor" />
+                  </button>
+                )}
+              </div>
 
               <div className="video-showcase-content">
                 <p>{item.subtitle}</p>
@@ -105,6 +111,7 @@ function VideoShowcaseSection() {
             </article>
           ))}
         </div>
+
       </div>
     </section>
   );

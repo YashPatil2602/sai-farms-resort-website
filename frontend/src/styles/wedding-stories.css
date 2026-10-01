@@ -195,3 +195,51 @@
     height: 62px;
   }
 }
+
+
+/* CLIENT MOBILE WEDDING VIDEO CONTENT */
+.wedding-story-media {
+  position: absolute;
+  inset: 0;
+}
+
+.wedding-story-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .wedding-story-card {
+    display: flex;
+    flex-direction: column;
+    background: #0b241a;
+  }
+
+  .wedding-story-media {
+    position: relative;
+    inset: auto;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .wedding-story-featured video,
+  .wedding-story-card video {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+  }
+
+  .wedding-story-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    padding: 22px 22px 25px;
+
+    background: #0b241a;
+  }
+}
