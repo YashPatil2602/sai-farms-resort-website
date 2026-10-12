@@ -243,3 +243,139 @@
     background: #0b241a;
   }
 }
+
+/* ==================================================
+   FIX: WEDDING STORY VIDEOS COLLAPSING INTO THIN BAR
+================================================== */
+
+@media (min-width: 901px) {
+
+  .wedding-stories-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+    grid-template-rows: repeat(2, 280px);
+    gap: 18px;
+  }
+
+  .wedding-story-card {
+    position: relative;
+    min-height: 280px;
+    overflow: hidden;
+    background: #0b241a;
+  }
+
+  .wedding-story-featured {
+    grid-row: 1 / span 2;
+    min-height: 578px;
+  }
+
+  .wedding-story-media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .wedding-story-media video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wedding-story-caption {
+    position: absolute;
+    z-index: 3;
+    left: 24px;
+    right: 24px;
+    bottom: 22px;
+  }
+
+  .wedding-story-play {
+    z-index: 4;
+  }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 900px) {
+
+  .wedding-stories-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .wedding-story-card,
+  .wedding-story-featured {
+    position: relative;
+    min-height: 420px;
+    grid-row: auto;
+  }
+
+  .wedding-story-media {
+    position: absolute;
+    inset: 0;
+  }
+}
+
+/* Mobile stays video first + text underneath */
+@media (max-width: 600px) {
+
+  .wedding-story-card,
+  .wedding-story-featured {
+    min-height: 0;
+    height: auto;
+    grid-row: auto;
+  }
+
+  .wedding-story-media {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .wedding-story-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wedding-story-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+}
+
+
+/* FINAL MOBILE WEDDING VIDEO SIZE FIX */
+@media (max-width: 600px) {
+
+  .wedding-story-media {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    overflow: hidden !important;
+  }
+
+  .wedding-story-media video {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  .wedding-story-card,
+  .wedding-story-featured {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+}
+
