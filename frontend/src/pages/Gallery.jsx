@@ -67,7 +67,7 @@ const galleryItems = [
   {
     id: 11,
     category: "Activities",
-    title: "School Water Park",
+    title: "Water Park",
     image: "/images/activities/school-water-park.jpg",
   },
   {

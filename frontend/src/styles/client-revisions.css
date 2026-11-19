@@ -1,0 +1,70 @@
+
+/* =========================================================
+   SAI FARMS - CLIENT REVISION OVERRIDES
+   Mobile-first client feedback
+   ========================================================= */
+
+/* Client requested no italic typography anywhere */
+body,
+body * {
+  font-style: normal;
+}
+
+/* Better readability for numbers, prices and phone numbers */
+.hero-stat strong,
+[class*="price"],
+[class*="Price"],
+[class*="stat"] strong,
+a[href^="tel:"] {
+  font-family: "Inter", Arial, sans-serif;
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+/* Phone numbers must remain clearly readable */
+a[href^="tel:"] {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Reduce excessive spaced-out typography */
+[class*="eyebrow"],
+[class*="label"],
+[class*="kicker"] {
+  letter-spacing: 0.16em;
+}
+
+/* Real-media badge style for upcoming actual-image labels */
+.actual-image-label {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 4;
+  padding: 5px 8px;
+  background: rgba(5, 35, 25, 0.78);
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Mobile-first improvements */
+@media (max-width: 600px) {
+
+  [class*="eyebrow"],
+  [class*="label"],
+  [class*="kicker"] {
+    letter-spacing: 0.12em;
+  }
+
+  a[href^="tel:"] {
+    font-size: 15px;
+  }
+
+  video {
+    max-width: 100%;
+  }
+}
+

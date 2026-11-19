@@ -14,7 +14,7 @@ function Navbar() {
 
         <Link to="/" className="navbar-logo" onClick={closeMenu}>
           <span className="logo-main">SAI FARMS</span>
-          <span className="logo-sub">RESORT & EXPERIENCES</span>
+          <span className="logo-sub">Sainath Shete Resort</span>
         </Link>
 
         <nav className={menuOpen ? "nav-links active" : "nav-links"}>

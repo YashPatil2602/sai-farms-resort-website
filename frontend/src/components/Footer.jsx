@@ -18,7 +18,7 @@ function Footer() {
 
           <Link to="/" className="footer-logo">
             <span>SAI FARMS</span>
-            <small>RESORT & EXPERIENCES</small>
+            <small>Sainath Shete Resort</small>
           </Link>
 
           <p>
