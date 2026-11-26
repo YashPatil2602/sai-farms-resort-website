@@ -20,7 +20,7 @@ function WeddingIntroSection() {
           <p>
             Sai Farms brings celebration spaces, accommodation,
             food and leisure together within one beautiful
-            8-acre resort — allowing every wedding function
+            8-acre resort, allowing every wedding function
             to unfold in one destination.
           </p>
         </div>

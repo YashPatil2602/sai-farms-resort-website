@@ -6,7 +6,7 @@ const experiences = [
     number: "01",
     label: "For Families",
     title: "Time Together",
-    image: "/images/activities/family-experience.jpg",
+    image: "/images/activities/resort-aerial.jpg",
     text:
       "Water fun, open lawns and comfortable stays create an easy family escape where everyone finds something to enjoy.",
   },

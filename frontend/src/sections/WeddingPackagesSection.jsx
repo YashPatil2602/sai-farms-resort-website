@@ -5,7 +5,7 @@ import "../styles/wedding-packages.css";
 const packages = [
   {
     title: "Day Program",
-    duration: "7:00 AM – 4:00 PM",
+    duration: "7:00 AM, 4:00 PM",
     price: "₹1,99,999",
     guests: "Up to 100 guests",
     note: "Breakfast, wedding lunch, preferred venue and accommodation.",

@@ -199,7 +199,7 @@ ${formData.message || "Please share more details."}
             <div className="contact-image">
 
               <img
-                src="/images/activities/riverside-view.jpg"
+                src="/images/activities/resort-aerial.jpg"
                 alt="Sai Farms Badlapur"
               />
 
@@ -309,8 +309,8 @@ ${formData.message || "Please share more details."}
                     Corporate Event
                   </option>
 
-                  <option value="School Picnic">
-                    School Picnic
+                  <option value="Picnics & Gatherings">
+                    Picnics & Gatherings
                   </option>
 
                   <option value="Accommodation">
@@ -475,7 +475,7 @@ ${formData.message || "Please share more details."}
 
             <div>
               <span>04</span>
-              <h3>School Picnics</h3>
+              <h3>Picnics & Gatheringss</h3>
               <p>
                 Water activities, games,
                 dining and group day experiences.

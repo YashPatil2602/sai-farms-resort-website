@@ -83,7 +83,7 @@ function HeroSection() {
 
         <p className="hero-description">
           Destination weddings, relaxing staycations, corporate gatherings
-          and unforgettable day experiences — all in one beautiful resort.
+          and unforgettable day experiences, all in one beautiful resort.
         </p>
 
         <div className="hero-actions">

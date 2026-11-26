@@ -1,69 +1,74 @@
 import { Link } from "react-router-dom";
-import {
-  ArrowUpRight,
-  MapPin,
-  Phone,
-  MessageCircle,
-} from "lucide-react";
-
 import "../styles/footer.css";
 
 function Footer() {
   return (
     <footer className="site-footer">
 
-      <div className="container footer-top">
+      <div className="footer-container">
 
         <div className="footer-brand">
 
-          <Link to="/" className="footer-logo">
-            <span>SAI FARMS</span>
-            <small>Sainath Shete Resort</small>
+          <Link
+            to="/"
+            className="footer-logo"
+            aria-label="Sai Farms home"
+          >
+            <img
+              src="/images/branding/sai-farms-logo-white.png"
+              alt="Sai Farms - Sainath Shete Resort"
+            />
           </Link>
 
-          <p>
-            One beautiful resort for destination weddings,
-            peaceful stays, corporate gatherings,
-            school picnics and memorable day experiences.
+
+          <p className="footer-description">
+            An eight-acre riverside resort near
+            Badlapur for weddings, staycations,
+            corporate events, picnics and memorable
+            group experiences.
           </p>
 
-          <Link to="/contact" className="footer-enquire-btn">
+
+          <Link
+            to="/contact"
+            className="footer-enquire-btn"
+          >
             Plan Your Experience
-            <ArrowUpRight size={16} />
           </Link>
 
         </div>
 
+
         <div className="footer-column">
+
           <p className="footer-column-title">
             Experiences
           </p>
 
           <Link to="/destination-wedding">
-            Destination Weddings
+            Weddings & Events
           </Link>
 
           <Link to="/staycation-corporate">
-            Staycation & Corporate
+            Staycation
+          </Link>
+
+          <Link to="/corporate-events">
+            Corporate Events
           </Link>
 
           <Link to="/school-picnic">
-            School Picnic
+            Picnics
           </Link>
 
-          <Link to="/accommodation">
-            Accommodation
-          </Link>
         </div>
 
+
         <div className="footer-column">
+
           <p className="footer-column-title">
             Explore
           </p>
-
-          <Link to="/">
-            Home
-          </Link>
 
           <Link to="/gallery">
             Gallery
@@ -73,10 +78,8 @@ function Footer() {
             Contact
           </Link>
 
-          <Link to="/contact">
-            Book Now
-          </Link>
         </div>
+
 
         <div className="footer-contact">
 
@@ -88,54 +91,43 @@ function Footer() {
             href="tel:+918888867575"
             className="footer-contact-item"
           >
-            <Phone size={17} strokeWidth={1.4} />
-
-            <span>
-              888 886 7575
-            </span>
+            888 886 7575
           </a>
 
           <a
-            href="https://wa.me/918888867575"
-            target="_blank"
-            rel="noreferrer"
+            href="tel:+918237637273"
             className="footer-contact-item"
           >
-            <MessageCircle
-              size={17}
-              strokeWidth={1.4}
-            />
-
-            <span>
-              WhatsApp Sai Farms
-            </span>
+            823 763 7273
           </a>
 
-          <div className="footer-contact-item">
-            <MapPin size={17} strokeWidth={1.4} />
 
-            <span>
-              Badlapur, Maharashtra
-            </span>
+          <div className="footer-contact-item">
+            Sai Farms
+            <br />
+            Sainath Shete Resort
+            <br />
+            Near Barvi Dam Road
+            <br />
+            Padirpada, Badlapur - 421503
           </div>
+
+
+          {/*
+            GST number will be inserted here
+            only after client supplies the
+            actual GST number.
+          */}
 
         </div>
 
       </div>
 
-      <div className="container footer-divider"></div>
 
-      <div className="container footer-bottom">
-
-        <p>
-          © {new Date().getFullYear()} Sai Farms.
-          All rights reserved.
-        </p>
-
-        <p>
-          Resort · Weddings · Stays · Experiences
-        </p>
-
+      <div className="footer-bottom">
+        © {new Date().getFullYear()}
+        {" "}
+        Sai Farms · Sainath Shete Resort
       </div>
 
     </footer>

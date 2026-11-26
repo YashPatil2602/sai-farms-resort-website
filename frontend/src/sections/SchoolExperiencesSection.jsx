@@ -20,7 +20,7 @@ const experiences = [
     icon: Trophy,
     title: "Outdoor Games",
     text: "Open activity areas where students can play, participate and enjoy time together.",
-    image: "/images/activities/family-experience.jpg",
+    image: "/images/activities/resort-aerial.jpg",
   },
   {
     number: "03",

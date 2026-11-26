@@ -7,7 +7,45 @@
     <title>frontend</title>
   </head>
   <body>
+    
+    <div
+      id="site-preloader"
+      aria-hidden="true"
+    >
+      <img
+        src="/images/branding/sai-farms-logo-white.png"
+        alt=""
+      />
+    </div>
+
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
-  </body>
+  
+    <script id="site-preloader-script">
+      window.addEventListener(
+        "load",
+        function () {
+          const loader =
+            document.getElementById(
+              "site-preloader"
+            );
+
+          if (loader) {
+            loader.classList.add(
+              "loaded"
+            );
+
+            window.setTimeout(
+              function () {
+                loader.remove();
+              },
+              450
+            );
+          }
+        }
+      );
+    </script>
+
+</body>
 </html>

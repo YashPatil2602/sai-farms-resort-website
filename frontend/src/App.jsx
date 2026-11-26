@@ -10,6 +10,7 @@ import Accommodation from "./pages/Accommodation";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import CorporateEvents from "./pages/CorporateEvents";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
+        <Route path="/corporate-events" element={<CorporateEvents />} />
         <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>
